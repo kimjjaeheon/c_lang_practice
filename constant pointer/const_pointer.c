@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* 상수 포인터 (constant pointer)*/
+/* 포인터 상수 (constant pointer)*/
 int main(int argc, char **argv)
 {
   int num = 1;
