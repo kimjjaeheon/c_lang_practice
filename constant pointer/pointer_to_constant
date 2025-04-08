@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/* 상수 포인터 (pointer to constant) */
+/* 값을 변경할 수 없지만, 주소 변경은 가능 */
+/* 포인터를 이용해 변수의 값을 변경하는 것을 막는다. */
+/* 가리키는 원본 변수 자체가 상수화되진 않는다. */
+
+int main(int argc, char* argv[])
+{
+  int num = 1;
+  int *ptr1 = &num;
+  const int* ptr2 = &num;
+
+  *ptr1 = 2;
+  num = 3;
+  //*ptr2 = 4; /* 에러 : 간접접근을 통한 값의 변경은 불가능하다. */
+  printf("주소값 변경 전 \n");
+  printf("ptr1 : %p\n", ptr1);
+
+  int num2 = 100;
+  ptr1 = &num2; /* 가리키는 주소의 변경은 가능하다. */
+  printf("주소값 변경 후\n");
+  printf("ptr1 : %p\n", ptr1);
+
+  return 0;
+}
