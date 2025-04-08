@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/* 상수 포인터 상수 (constant pointer to constant) */
+/* 값의 변경 불가능, 주소의 변경 불가능 */
+int main(int argc, char** argv)
+{
+  int num = 1;
+  int num2 = 2;
+  const int* const ptr = &num;
+  // *ptr = 2;     /* 값 변경 불가능 */
+  // ptr = &num2;  /* 주소 변경 불가능 */
+
+  return 0;
+}
